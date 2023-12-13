@@ -29,7 +29,7 @@ install:
 
 uninstall:
 	rm -f "$(DESTDIR)/bin/$(PROG)"
-        rm -f "$(EXTENSION_DIR)/otp.bash"
+	rm -f "$(EXTENSION_DIR)/otp.bash"
 	@echo
 	@echo "$(PROG) is removed succesfully from $(DESTDIR)/bin"
 	@echo
