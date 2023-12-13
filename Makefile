@@ -1,5 +1,6 @@
 PROG ?= otptool
 DESTDIR ?= /usr/local
+EXTENSION_DIR ?= $(DESTDIR)/lib/password-store/extensions
 
 all:
 	$(MAKE) build
@@ -21,12 +22,14 @@ install:
 	@echo "Install $(PROG) in $(DESTDIR)/bin"
 	@echo
 	install -m 0755 "$(PROG)" "$(DESTDIR)/bin/$(PROG)"
+	install -m 0755 "otp.bash" "$(EXTENSION_DIR)/otp.bash"
 	@echo
 	@echo "$(PROG) is installed succesfully in $(DESTDIR)/bin"
 	@echo
 
 uninstall:
 	rm -f "$(DESTDIR)/bin/$(PROG)"
+        rm -f "$(EXTENSION_DIR)/otp.bash"
 	@echo
 	@echo "$(PROG) is removed succesfully from $(DESTDIR)/bin"
 	@echo

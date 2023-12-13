@@ -30,8 +30,9 @@ or locally with:
 
 # History
 
-### Latest: 20231213.1445
+### Latest: 20231213.1922
 
+ - 20231213.1922: Removed pass-otp dependencies
  - 20231213.1445: First release
 
 
